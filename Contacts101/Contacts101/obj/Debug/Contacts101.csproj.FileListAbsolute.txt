@@ -1,0 +1,6 @@
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\bin\Contacts101.dll.config
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\bin\Contacts101.dll
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\bin\Contacts101.pdb
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\obj\Debug\Contacts101.csprojResolveAssemblyReference.cache
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\obj\Debug\Contacts101.dll
+c:\users\coder camps\documents\visual studio 2013\Projects\Contacts101\Contacts101\obj\Debug\Contacts101.pdb
