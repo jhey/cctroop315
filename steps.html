@@ -1,0 +1,47 @@
+
+
+Create Two New Projects
+-Add => New Project
+-Name is $project.Data and $project.Data.Model ($project being whatever your project is called)
+-Type is a C# Class Library
+
+Add References
+-In the main project, right click on references, and add both other projects
+-In the Dat odel project, add the Model project as a reference
+
+Install "EntityFramework" For All Projects
+-NuGet Packages
+-Search "Installed Packages", and then click on manage
+-If it is not already installed, search for it in "Online"
+
+Create Data Models
+-Create your classes for what your tables will be in the Data.Models project
+
+Create Db Context class
+-Create a new class in .Data for your Database class.  Inherit from DbContext
+-Add a default constructor for your DbContext class and change the inherited DbContext constructor (base)
+ to pass in a string that says "DefaultConnection"
+-Create properties for each of your data models you created in the previous step.  This should all be DbSet with the name of your data models as the type.
+ 
+Copy connection string
+-Add the following to your web.config after the <ConfigSections> and before <appSettings>:
+<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\EFOrders.mdf;Initial Catalog=EFOrders;Integrated Security=True" providerName="System.Data.SqlClient" />
+-Be sure to change the database name to what you desire it to be called.  Change it in both places specified
+ 
+Enable/Add Migrations
+-Tools => NuGet Package Manager => Package Manager Console
+-T e Data.Model project in the default project
+-Type in "enable-migrations"
+-Resolve any errors 
+-Type in "add ation <name>" where name is a short description of the context of the migration
+-Resolve any errors
+
+Seeding (optional)
+-Add your Seeder class and Seed method and run from the Configuration classes Seed method
+-Populate your Seed method with the appropriate seed data
+
+Run migrations and Seeder
+-Go to the Package Manager Console in the previous step
+-Type in "update-database"
+-Resolve  y errors
+-Check your database
